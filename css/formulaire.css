@@ -1,0 +1,26 @@
+h1 {
+    color: white;
+    background-color: rgba(128, 128, 128, 0.418);
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    background-image: url(https://www.radiofrance.fr/s3/cruiser-production/2020/06/985c8471-d1a5-4e9d-b681-d58ddba0d8d1/560x315_gettyimages-1168199865.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.connexion {
+    display: flex;
+    justify-content: end;
+}
