@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("database.php");
 
 // Se connecter à la base de données : 
@@ -32,6 +33,7 @@ try {
 </head>
 
 <body>
+
 
 </body>
 
