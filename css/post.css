@@ -1,0 +1,9 @@
+input,
+textarea,
+button {
+    display: block;
+}
+
+nav a {
+    margin-right: 20px;
+}

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +17,11 @@
         </div>
         <div class="flex">
             <h1>Connexion</h1>
+            <?php if (isset($_SESSION['error'])) { ?>
+                <p class="error">
+                    <?php echo $_SESSION['error'] ?>
+                </p>
+            <?php } ?>
             <input type="text" name="pseudo" placeholder="Votre pseudo" required>
             <input type="password" name="mdp" placeholder="Mot de passe" required>
             <div class="buttons">

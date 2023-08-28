@@ -1,7 +1,7 @@
 <?php
 session_start(); // à mettre avant le html pour démarrer une session
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['id'])) { // Verifie qu'une session est active , sinon , renvoi vers la page de connexion.
     header("Location: connexion.php");
 }
 ?>

@@ -15,9 +15,6 @@
         </div>
         <div class="flex">
             <h1>Inscription</h1>
-            <div class="connexion">
-                <button type="button" name="connexion"><a href="connexion.php">Connexion</a></button>
-            </div>
             <input type="email" name="email" placeholder="Votre email" required>
             <input type="text" name="pseudo" placeholder="Votre pseudo" required>
             <input type="password" name="mdp" placeholder="Mot de passe" required>
@@ -25,6 +22,9 @@
             <input type="file" name="image">
             <div class="buttons">
                 <button type="submit" name="inscription">valider</button>
+                <div class="connexion">
+                    <button type="button" name="connexion"><a href="connexion.php">Connexion</a></button>
+                </div>
                 <button type="button"><a href="index.php">retour</a></button>
             </div>
         </div>
