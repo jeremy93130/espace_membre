@@ -38,7 +38,6 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 900px;
     width: 700px;
     margin: auto;
 }
@@ -59,4 +58,134 @@ form {
 .buttons {
     display: flex;
     justify-content: space-between;
+}
+
+body {
+
+    margin: 0;
+
+
+
+    padding: 0;
+
+
+
+    background-color: plum;
+
+}
+
+
+
+.container {
+
+    width: 60%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    margin: auto;
+
+}
+
+
+
+input {
+
+    width: 100%;
+
+
+
+    height: 35px;
+
+
+
+}
+
+
+
+.profil {
+
+    width: 30px;
+
+
+
+    height: 30px;
+
+}
+
+
+
+.profil img {
+
+    width: 100%;
+
+
+
+    height: 100%;
+
+
+
+    border-radius: 50%;
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+
+
+    justify-content: flex-end;
+
+
+
+    border: solid 2px;
+
+}
+
+
+
+.logout {
+
+    background-color: palevioletred;
+
+
+
+    color: white;
+
+
+
+    height: 30px;
+
+}
+
+.post {
+
+    width: 200px;
+
+    height: 250px;
+
+    margin: 10px;
+
+}
+
+.postimg {
+
+    width: 200px;
+
+    height: 200px;
+
+}
+
+.postimg img {
+
+    width: 100%;
+
+    height: 100%;
+
 }

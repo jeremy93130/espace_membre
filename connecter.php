@@ -45,6 +45,10 @@ if (isset($_POST['connecter'])) {
             $_SESSION["pseudo"] = $user['pseudonyme'];
             $_SESSION["images"] = $user['images'];
 
+            // Création du cookie qui va stocker l'identifiant de l'utilisateur pour permettre une meilleure expérience:
+            // c'est à dire on va la connecter automatiquement après vérification du cookie:
+            setcookie("id_user", $user['id_membres'], time() + 3600, '/', 'localhost', false, true);
+
             // $_SESSION = [
             // 'id' => 1,
             // "pseudo" => "WassilaDors",
@@ -82,9 +86,33 @@ if (isset($_POST['publier'])) {
     // Executer la requête :
     try {
         $request->execute(array($_SESSION['id'], $image_name, $message));
+        header("Location: page.php");
     } catch (PDOException $error) {
         echo $error->getMessage();
     }
 }
 
+
+if (isset($_GET["idpost"])) {
+    $dbConnexion = dBConnexion(); // Connexion à la base de données
+
+    // Prépare la requête :
+    $request = $dbConnexion->prepare("SELECT likes FROM posts WHERE id_post=?");
+
+    // Executer la requête : 
+    $request->execute(array($_GET["idpost"]));
+
+    // On récupère le résultat : 
+
+    $likes = $request->fetch();
+
+    // echo $likes['likes'];
+
+    // Requête pour modifier le nombre de likes : 
+    $request1 = $dbConnexion->prepare("UPDATE posts SET likes=? WHERE id_post = ?");
+
+    // Execution de la requête : 
+    $request1->execute(array($likes['likes'] + 1, $_GET['idpost']));
+    echo "<script> location.href='index.php'</script>";
+}
 ?>
