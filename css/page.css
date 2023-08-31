@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    margin: 3px;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav div {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+}
+
+nav div img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.deconnexion {
+    padding: 0;
+}
+
+p {
+    color: white;
+}
+
+
+.deconnexion {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+}
+
+.publish {
+    margin-right: 20px;
+}

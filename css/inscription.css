@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.lion {
+    background-image: url("https://dearsam.com/img/800/600/resize/l/i/lion-black-and-white-50x70_3a189.jpg");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 600px;
+}
+
+button {
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+    width: 700px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+}
+
+.connexion {
+    display: flex;
+    justify-content: end;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
