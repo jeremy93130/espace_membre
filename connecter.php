@@ -31,7 +31,7 @@ if (isset($_POST['connecter'])) {
 
     if (empty($user)) {
         // echo "Pseudonyme ou Mdp inconnu";
-        $_SESSION['error'] = "Utilisateur inconnu..."; // Ajouter le message d'erreur dans le tableau $_SESSION 
+        $_SESSION['error'] = "Nom d'utilisateur ou Mot de passe incorrect"; // Ajouter le message d'erreur dans le tableau $_SESSION 
         header("Location: connexion.php"); // Redirection vers la page de connexion
     } else {
         // La fonction password_verify prend 2 paramètres : 
@@ -48,6 +48,8 @@ if (isset($_POST['connecter'])) {
             // Création du cookie qui va stocker l'identifiant de l'utilisateur pour permettre une meilleure expérience:
             // c'est à dire on va la connecter automatiquement après vérification du cookie:
             setcookie("id_user", $user['id_membres'], time() + 3600, '/', 'localhost', false, true);
+            var_dump($_SESSION);
+            var_dump($_COOKIE);
 
             // $_SESSION = [
             // 'id' => 1,
@@ -57,7 +59,7 @@ if (isset($_POST['connecter'])) {
 
             header("Location: page.php");
         } else {
-            echo "Mot de passe incorrect";
+            $_SESSION['error'];
             header('refresh: 2; http://localhost/espace_membre/connexion.php');
         }
 
